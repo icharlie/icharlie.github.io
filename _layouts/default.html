@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{{ page.title }}</title>
+<meta name="viewport" content="width=device-width">
+
+<!-- syntax highlighting CSS -->
+<link rel="stylesheet" href="/css/syntax.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/css/bootstrap.css"/>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div id="wrap">
+  <div class="container">
+    <div class="row">
+      <header>
+        <hgroup>
+        <h1>{{ site.name }}</h1>
+        </hgroup>
+      </header>
+      <div class="col-md-2" role="navigation">
+        <nav class="well sidebar-nav">
+          <ul>
+            <li><a href="/" class="extra">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-md-10">
+        <div id="home">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->
+<div id="footer">
+  <div class="container">
+    <p class="text-muted credit">
+    &copy; 2013 Charlie Chang
+    <a href="http://github.com/icharlie"><i class="icon-github icon-2x"></i></a>
+    <a href="http://twitter.com/cr0rc"><i class="icon-twitter icon-2x"></i></a>
+    </p>
+  </div>
+</div>
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+</body>
+</html>
