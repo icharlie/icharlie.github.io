@@ -5,8 +5,6 @@ description: ""
 category: ""
 tags: [ruby, regex]
 ---
-{% include JB/setup %}
-
 ### Regular Expression
   `char =~ /[0-9]/` or `char =~ /\d/` or `char =~ /[[:digit]]/`.
 
