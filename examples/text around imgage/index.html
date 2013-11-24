@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wrapping Text Around Images</title>
+</head>
+<style>
+    div.sol {
+        margin-top: 20px;
+    }
+    .center {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .text {
+        width: 230px;
+        max-height: 250px;
+        overflow-y: scroll;
+    }
+    .smallArea{
+        width: 400px;
+        height: 250px;
+        max-height: 250px;
+    }
+    .backgroundSol {
+        background-image: url('buybott-smiling-bnw.png');
+        background-attachment: relative;
+        background-repeat: no-repeat;
+        background-position: right 0px top 10px;
+    }
+    img.alignRight {
+        float: right;
+    }
+    img.alignCenter {
+        display: block; margin-left: auto; margin-right: auto;
+    }
+</style>
+<body>
+    <!-- using background image -->
+    <div class="backgroundImage sol">
+        <div class="smallArea center backgroundSol">
+            <div class="text">
+                <p class="lipsum(2)"></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--  -->
+    <div class="sol">
+        <div class="smallArea center">
+            <img src="buybott-smiling-bnw.png" alt="smile" class="alignRight">
+            <p class="lipsum(2) center"></p>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://more.handlino.com/javascripts/moretext-1.2.js" type="text/javascript"></script>
+</body>
+</html>
