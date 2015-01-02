@@ -11,7 +11,7 @@ One is outside `div` container, and the other is inside `div` container, which i
 
 In the inside `div`, we need to use `transform`, rotate and scall, to make it look like arrow.
 
-We also need to centralize inside `div`. Because the posistion is `absolute`, we need to use `left:50%` and `margin-left:-12px`. The negative *12px* is the half of the inside `div`'s width.
+We also need to centralize the inside `div`. Because the posistion is `absolute`, we need to use `left:50%` and `margin-left:-12px`. The negative *12px* is the half of the inside `div`'s width.
 
 If you want the border effect, you need to put an element,`span`, into the inside `div`. Move the `transform` into `span` and create border on `span` not inside `div`. In the inside `div`, we need to use `clip: rect(12px 24px 24px 0);` cut off the top border.
 
