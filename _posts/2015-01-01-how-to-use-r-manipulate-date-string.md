@@ -3,7 +3,7 @@ layout: post
 title: "How to use r manipulate date string"
 description: ""
 category: ""
-tags: R, data
+tags: [R, data]
 ---
 
 ### Convert string to Date object
