@@ -603,3 +603,46 @@ pre
 
 .post-tag
   text-decoration: underline
+
+.menu
+  position: fixed
+  width: 0
+  left: 10px
+  top: 10px
+  backgroud-color: transparent
+  &.menu-active
+    background-color: #428BCA
+    width: 100%
+    width: 250px
+    transiton: width 1.5s
+    -webkit-transition: width 1.5s
+  margin: 0
+  padding: 5px
+  li
+    // display: none
+    opacity: 0
+    &.menu-toggle
+      // display: inline-block
+      opacity: 1
+    width: 90%
+    list-style: none
+    &:not(:last-of-type)
+      border-bottom: 1px solid #fff
+    &:not(.menu-toggle) a 
+      display: inline-block
+      width: 100%
+      height: 50px
+      line-height: 50px
+      padding-left: 10px
+      vertical-align: middle
+      text-decoration: none
+      color: #FFFFFF
+  &.menu-active
+    li
+      opacity: 1
+      width: 100%
+      &:hover
+        background-color: #1C6EB5
+    li.menu-toggle
+      opacity: 0
+
