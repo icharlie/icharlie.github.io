@@ -10,7 +10,7 @@ PubSub.prototype.publish = function( topic, args ) {
     }
 
     var subscribers = this.topics[topic],
-        len = subscribers ? subscribers.length : 0;
+    len = subscribers ? subscribers.length : 0;
 
     while (len--) {
         subscribers[len].func( topic, args );
@@ -59,29 +59,25 @@ PubSub.prototype.unsubscribe = function( token ) {
     fields.homeOfPrice = $('#homeOfPrice');
     fields.downPayment = $('#downPayment');
     fields.downPaymentPercent = $('#downPaymentPercent');
-    fields.loanTerm = $('#loanTerm');
-    fields.amount = $('#amount');
-    var mortgage = {
-            homeOfPrice: parseFloat(fields.homeOfPrice.val()) || 0,
-            downPayment: parseFloat(fields.downPayment.val()) || 0 ,
-            downPaymentPercent: parseFloat(fields.downPaymentPercent.val()) || 0,
-            loanTerm: parseFloat(fields.loanTerm.val()) || 0,
-            amount: parseFloat(fields.amount.val()) || 0
-        };
+    var values = {
+        homeOfPrice: parseFloat(fields.homeOfPrice.val()) || 0,
+        downPayment: parseFloat(fields.downPayment.val()) || 0 ,
+        downPaymentPercent: parseFloat(fields.downPaymentPercent.val()) || 0
+    };
 
     var mortgagaHandler = new PubSub();
 
 
     for(var key in fields) {
         fields[key].change(function(e) {
-            mortgage[e.target.name] = parseFloat(e.target.value) || 0;
+            values[e.target.name] = parseFloat(e.target.value) || 0;
             mortgagaHandler.publish(e.target.name);
         })
     }
 
     mortgagaHandler.subscribe( 'updateInputFields', function() {
-        for(var key in mortgage) {
-            fields[key].val(mortgage[key]);
+        for(var key in values) {
+            fields[key].val(values[key]);
         }
     });
 
@@ -90,17 +86,17 @@ PubSub.prototype.unsubscribe = function( token ) {
     });
 
     mortgagaHandler.subscribe( 'homeOfPrice', function() {
-        mortgage.downPayment = mortgage.homeOfPrice * mortgage.downPaymentPercent / 100;
+        values.downPayment = values.homeOfPrice * values.downPaymentPercent / 100;
         mortgagaHandler.publish('updateInputFields');
     });
 
     mortgagaHandler.subscribe( 'downPayment', function() {
-        mortgage.downPaymentPercent = mortgage.downPayment / mortgage.homeOfPrice * 100;
+        values.downPaymentPercent = values.downPayment / values.homeOfPrice * 100;
         mortgagaHandler.publish('updateInputFields');
     });
 
     mortgagaHandler.subscribe( 'downPaymentPercent', function() {
-        mortgage.downPayment = mortgage.homeOfPrice * mortgage.downPaymentPercent / 100;
+        values.downPayment = values.homeOfPrice * values.downPaymentPercent / 100;
         mortgagaHandler.publish('updateInputFields');
     });
 
