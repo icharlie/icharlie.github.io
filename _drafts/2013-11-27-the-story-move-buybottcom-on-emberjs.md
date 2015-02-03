@@ -5,9 +5,6 @@ description: ""
 category: ""
 tags: []
 ---
-{% include JB/setup %}
-
-
 A few months ago, our team wanted to move our front-end code into modern MV* framework. The main reason is that our code becomes messy and hard to maintain. We were thinking to find a better way to **manage** our front-end code. My boss wanted me to do some research on current MV* frameworks. The best resource pop out from the top of my head is [TodoMVC](http://todomvc.com/).
 
 During that time, I needed to keep working on the new features and also played with these frameworks. Honestly, I just tried [Backbone](http://backbonejs.org/) and [Ember](http://emberjs.com/).

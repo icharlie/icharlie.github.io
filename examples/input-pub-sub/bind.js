@@ -86,10 +86,11 @@ PubSub.prototype.unsubscribe = function( token ) {
         });
     }
 
-    inputsHandler.subscribe( 'updateInputFields', function() {
+    inputsHandler.subscribe( 'stateChanged', function() {
         for(var key in values) {
             fields[key].val(values[key]);
         }
+        updateEventLog('caculdate result');
     });
 
     inputsHandler.subscribe( 'price', function() {
@@ -98,7 +99,7 @@ PubSub.prototype.unsubscribe = function( token ) {
         values.payment = values.price * values.percentage / 100;
         updateEventLog('Updated Down Payment value');
         updateEventLog('Publishing update input fields events');
-        inputsHandler.publish('updateInputFields');
+        inputsHandler.publish('stateChanged');
         updateEventLog('Updated input fields');
     });
 
@@ -108,7 +109,7 @@ PubSub.prototype.unsubscribe = function( token ) {
         values.percentage = values.payment / values.price * 100;
         updateEventLog('Updated Down Payment Percent value');
         updateEventLog('Publishing update input fields events');
-        inputsHandler.publish('updateInputFields');
+        inputsHandler.publish('stateChanged');
         updateEventLog('Updated input fields');
     });
 
@@ -118,7 +119,7 @@ PubSub.prototype.unsubscribe = function( token ) {
         values.payment = values.price * values.percentage / 100;
         updateEventLog('Updated Down Payment value');
         updateEventLog('Publishing update input fields events');
-        inputsHandler.publish('updateInputFields');
+        inputsHandler.publish('stateChanged');
         updateEventLog('Updated input fields');
     });
 
