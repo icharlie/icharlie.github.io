@@ -1,3 +1,6 @@
+// From Javascript Design Patterns
+// http://addyosmani.com/resources/essentialjsdesignpatterns/book/
+
 var PubSub = function () {
     'use strict';
     this.topics = {};
@@ -20,10 +23,6 @@ PubSub.prototype.publish = function( topic, args ) {
     return this;
 };
 
-// Subscribe to events of interest
-// with a specific topic name and a
-// callback function, to be executed
-// when the topic/event is observed
 PubSub.prototype.subscribe = function( topic, func ) {
     'use strict';
     if (!this.topics[topic]) {
@@ -38,9 +37,6 @@ PubSub.prototype.subscribe = function( topic, func ) {
     return token;
 };
 
-// Unsubscribe from a specific
-// topic, based on a tokenized reference
-// to the subscription
 PubSub.prototype.unsubscribe = function( token ) {
     'use strict';
     for ( var m in this.topics ) {
@@ -62,7 +58,8 @@ PubSub.prototype.unsubscribe = function( token ) {
     fields.price = $('#price');
     fields.payment = $('#payment');
     fields.percentage = $('#percentage');
-    var values = {
+
+    var state = {
         price: parseFloat(fields.price.val()) || 0,
         payment: parseFloat(fields.payment.val()) || 0 ,
         percentage: parseFloat(fields.percentage.val()) || 0
@@ -72,33 +69,43 @@ PubSub.prototype.unsubscribe = function( token ) {
         var p = '<p>' + content + '</p>';
         $('#event-log').append(p);
     };
+
     var cleanLog = function() {
         $('#event-log').empty();
     };
 
     var inputsHandler = new PubSub();
 
-
+    /**
+     * Using the input field's namte attribute as a topic.
+     * When input change event happens, it will pusblic its' topic.
+     * So, all subscribers will do their jobs correspond with the input change.
+     */
     for(var key in fields) {
         fields[key].change(function(e) {
-            values[e.target.name] = parseFloat(e.target.value) || 0;
+            state[e.target.name] = parseFloat(e.target.value) || 0;
             inputsHandler.publish(e.target.name);
         });
     }
 
-    inputsHandler.subscribe( 'stateChanged', function() {
-        for(var key in values) {
-            fields[key].val(values[key]);
+    var stateChangedSubscriber = function() {
+        for(var key in state) {
+            fields[key].val(state[key]);
         }
-        updateEventLog('caculdate result');
-    });
+        updateEventLog('Input fields have been updated');
+    };
+    /**
+     * the state changed subscribe function.
+     * It is going to update the input fields' values.
+     */
+    inputsHandler.subscribe('stateChanged', stateChangedSubscriber);
 
     inputsHandler.subscribe( 'price', function() {
         cleanLog();
         updateEventLog('Home of price changed');
-        values.payment = values.price * values.percentage / 100;
+        state.payment = state.price * state.percentage / 100;
         updateEventLog('Updated Down Payment value');
-        updateEventLog('Publishing update input fields events');
+        updateEventLog('Publishing state change event');
         inputsHandler.publish('stateChanged');
         updateEventLog('Updated input fields');
     });
@@ -106,9 +113,9 @@ PubSub.prototype.unsubscribe = function( token ) {
     inputsHandler.subscribe( 'payment', function() {
         cleanLog();
         updateEventLog('Down Payment changed');
-        values.percentage = values.payment / values.price * 100;
+        state.percentage = state.payment / state.price * 100;
         updateEventLog('Updated Down Payment Percent value');
-        updateEventLog('Publishing update input fields events');
+        updateEventLog('Publishing state change event');
         inputsHandler.publish('stateChanged');
         updateEventLog('Updated input fields');
     });
@@ -116,9 +123,9 @@ PubSub.prototype.unsubscribe = function( token ) {
     inputsHandler.subscribe( 'percentage', function() {
         cleanLog();
         updateEventLog('Down Payment Percent changed');
-        values.payment = values.price * values.percentage / 100;
+        state.payment = state.price * state.percentage / 100;
         updateEventLog('Updated Down Payment value');
-        updateEventLog('Publishing update input fields events');
+        updateEventLog('Publishing state change event');
         inputsHandler.publish('stateChanged');
         updateEventLog('Updated input fields');
     });
