@@ -7,6 +7,11 @@
     </head>
     <body ng-app="showCase">
         <div ng-controller="DataReloadWithPromiseCtrl as datatableCtrl">
+            <label for="First_Name">First Name</label><input type="text" ng-model="datatableCtrl.user.firstName" name="First_Name" value="" id="First_Name">
+            <label for="Last_Name">Last Name</label><input type="text" ng-model="datatableCtrl.user.lastName" name="Last_Name" value="" id="Last_Name">
+            <button type="button" ng-click="datatableCtrl.add();">Add</button>
+            
+            
             <table datatable="" dt-options="datatableCtrl.dtOptions" dt-columns="datatableCtrl.dtColumns" class="row-border hover"></table>
         </div>
         <script src="lib/jquery.min.js"></script>
