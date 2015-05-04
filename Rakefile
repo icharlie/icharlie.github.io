@@ -66,7 +66,6 @@ task :post do
     post.puts "category: \"#{category.gsub(/-/,' ')}\""
     post.puts "tags: #{tags}"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
   end
 end # task :post
 
@@ -98,7 +97,6 @@ task :draft do
     draft.puts "category: \"#{category.gsub(/-/,' ')}\""
     draft.puts "tags: #{tags}"
     draft.puts "---"
-    draft.puts "{% include JB/setup %}"
   end
 end # task :post
 
