@@ -1,0 +1,3 @@
+[submodule "projects/angular-datatables-completed"]
+	path = projects/angular-datatables-completed
+	url = git@github.com:icharlie/angular-datatables-completed.git
