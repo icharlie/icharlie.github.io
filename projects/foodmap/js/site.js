@@ -28,12 +28,6 @@ function paginate() {
   changePage()
 }
 
-function init() {
-  paginate();
-  initialAddressLink();
-  bindSelectedEvent()
-}
-
 function bindSelectedEvent() {
   $("ol > div[id^=page] > li").each(function(a) {
     $(this).bind("click", function() {
@@ -55,7 +49,10 @@ function initialAddressLink() {
 
 function initialize() {
   findByAddress("Oregon State University Corvallis, OR",
-    "Oregon State University", 15)
+    "Oregon State University", 15);
+    paginate();
+    initialAddressLink();
+    bindSelectedEvent();
 }
 
 function findByAddress(a, d, b) {
