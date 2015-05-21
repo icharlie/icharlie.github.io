@@ -14,6 +14,9 @@
     </script>
     <title>FoodMap Mobile@OSU</title>
     <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        initialize();
+      });
       $('#table').live('pageinit', function(event, data) {
 
         $('li').each(function(e) {
