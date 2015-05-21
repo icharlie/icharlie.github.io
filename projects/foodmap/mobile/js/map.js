@@ -9,13 +9,6 @@ function initialize() {
     myOptions);
 }
 
-function loadScript() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'http://maps.googleapis.com/maps/api/js?key=AIzaSyCDNyt9ZEPjaGi_w41yxjpRkMq6qj0gPVA&sensor=true&callback=initialize';
-  document.body.appendChild(script);
-}
-
 function findByAddress(address, title, zoom) {
   $.cookie('address', address);
   $.cookie('title', title);
