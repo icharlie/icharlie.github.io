@@ -89,5 +89,3 @@ function findByAddress(a, d, b) {
     }
   })
 };
-
-window.onload = init;
