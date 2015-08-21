@@ -18,6 +18,8 @@ function findByAddress(address, title, zoom) {
   var map_height;
   if (navigator.userAgent.indexOf('iPhone') != -1) {
     map_height = 480 - 50;
+  } else {
+      map_height = window.screen.height;
   }
   $("#map_canvas").css("width", "100%");
   $("#map_canvas").css("height", map_height);
