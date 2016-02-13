@@ -35,8 +35,8 @@ module JB
       File.__send__ :join, path
     end
 
-  end #Path
-end #JB
+  end
+end
 
 # Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
 desc "Begin a new post in #{CONFIG['posts']}"

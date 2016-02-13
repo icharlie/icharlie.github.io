@@ -4,7 +4,4 @@ title: "Projects"
 description: ""
 ---
 
-
-
-
 [FoodMap](foodmap)

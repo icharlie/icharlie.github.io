@@ -1,5 +1,5 @@
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 # Site settings
@@ -17,7 +17,7 @@ name: 'Charlie Chang'
 author: 'Charlie Chang'
 author_image: "/assets/images/author.jpg"
 
-paginate:	5
+paginate:	10
 
 url: "http://www.charliechang.tw" # the base hostname & protocol for your site
 baseurl: ""
