@@ -1,6 +1,6 @@
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 # Site settings
 title: "Charlie Chang"
@@ -18,6 +18,11 @@ author: 'Charlie Chang'
 author_image: "/assets/images/author.jpg"
 
 paginate:	10
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-gist
 
 url: "http://www.charliechang.tw" # the base hostname & protocol for your site
 baseurl: ""
