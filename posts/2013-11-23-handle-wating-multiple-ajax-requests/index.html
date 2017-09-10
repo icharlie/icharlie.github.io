@@ -1,0 +1,130 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Handle waiting multiple ajax requests &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="http://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="http://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="http://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='http://www.charliechang.tw/post'>Archive</a>
+	<a href='http://www.charliechang.tw/tags'>Tags</a>
+	<a href='http://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Handle waiting multiple ajax requests
+                    </h1>
+                    <h2 class="headline">
+                    Nov 23, 2013 15:42
+                    · 154 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="http://www.charliechang.tw/tags/ajax">ajax</a>
+                          
+                              <a href="http://www.charliechang.tw/tags/deferred">deferred</a>
+                          
+                              <a href="http://www.charliechang.tw/tags/.when">$.when</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>The general way to handle multiple ajax requests, you can use the following code.<br></p>
+
+<pre><code>$.when(ajaxCall1, ajaxCall2, ...).done(function(result1, result2, ..) {
+    // do something
+}
+</code></pre>
+
+<p><small><i>ps:result1, result2, &hellip; are all array objects and the really data exists in the first element of each result array</i></small></p>
+
+<p>However, this way can work only when you already know how many ajax calls.<br>
+  How do you handle multiple unknown ajax calls?</p>
+
+<p>Here, we need to use <code>apply</code> to invoke jQuery&rsquo;s <code>when</code> function and use <code>arguments</code> to get the all results</p>
+
+<pre><code>  $.when.apply($, [ajaxCall1, ajaxCall2, ...]).done(function(){
+    var results = arguments; // result1, result2, ....
+    // do something
+  }
+</code></pre>
+
+<p>The code here will work the same as the first code example.<br>
+  But we can collect all ajax calls into an array then pass this array into <code>apply</code> function as the second parameter, so we don&rsquo;t care how many ajax calls anymore.</p>
+
+<h4 id="reference">reference:</h4>
+
+<p><a href="http://stackoverflow.com/questions/6538470/jquery-deferred-waiting-for-multiple-ajax-requests-to-finish">jQuery Deferred - waiting for multiple AJAX requests to finish</a></p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="http://www.charliechang.tw/js/main.js"></script>
+<script src="http://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
