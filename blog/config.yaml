@@ -1,5 +1,0 @@
-baseURL: "http://www.charliechang.tw/"
-languageCode: "en-us"
-title: "My New Hugo Site"
-theme: "cactus-plus"
-publishDir: docs
