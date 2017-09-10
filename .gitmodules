@@ -1,3 +1,6 @@
 [submodule "projects/angular-datatables-completed"]
 	path = projects/angular-datatables-completed
 	url = git@github.com:icharlie/angular-datatables-completed.git
+[submodule "blog/themes/cactus-plus"]
+	path = blog/themes/cactus-plus
+	url = https://github.com/nodejh/hugo-theme-cactus-plus
