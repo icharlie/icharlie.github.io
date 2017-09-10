@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tempalte Javascript on My New Hugo Site</title>
-    <link>http://www.charliechang.tw/categories/tempalte-javascript/</link>
+    <link>https://www.charliechang.tw/categories/tempalte-javascript/</link>
     <description>Recent content in Tempalte Javascript on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Oct 2013 18:36:24 -0700</lastBuildDate>
     
-	<atom:link href="http://www.charliechang.tw/categories/tempalte-javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.charliechang.tw/categories/tempalte-javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jinj2 with Handlebars</title>
-      <link>http://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</link>
+      <link>https://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</link>
       <pubDate>Wed, 09 Oct 2013 18:36:24 -0700</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</guid>
+      <guid>https://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</guid>
       <description>Jinja2 and Handlebar use the same delimiters for expressions. In order to avoid parsing errors, you have to do as follow.
 {% gist icharlie/360dacf4b6b6bcff7d9e %}
 ps: jekyll uses the same&amp;hellip;.

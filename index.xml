@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://www.charliechang.tw/</link>
+    <link>https://www.charliechang.tw/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 08 Dec 2013 15:45:00 -0700</lastBuildDate>
     
-	<atom:link href="http://www.charliechang.tw/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.charliechang.tw/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The first alias for PHP</title>
-      <link>http://www.charliechang.tw/posts/2013-12-08-the-first-alias-for-php/</link>
+      <link>https://www.charliechang.tw/posts/2013-12-08-the-first-alias-for-php/</link>
       <pubDate>Sun, 08 Dec 2013 15:45:00 -0700</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2013-12-08-the-first-alias-for-php/</guid>
+      <guid>https://www.charliechang.tw/posts/2013-12-08-the-first-alias-for-php/</guid>
       <description>Recently, I joined a web service company and the language we use is PHP. I am not so familiar with PHP, and I want to have the same experience as Ruby, using irb to play with some functions. The PHP does give developers having the same interactive environment. My first guess war using php -i to get into the interactive environment, but it was wrong, this shows tons of PHP information.</description>
     </item>
     
     <item>
       <title>A little cheating way to move your site into ember.js</title>
-      <link>http://www.charliechang.tw/posts/2013-11-28-a-little-cheating-way-to-move-into-emberjs/</link>
+      <link>https://www.charliechang.tw/posts/2013-11-28-a-little-cheating-way-to-move-into-emberjs/</link>
       <pubDate>Thu, 28 Nov 2013 15:44:00 -0700</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2013-11-28-a-little-cheating-way-to-move-into-emberjs/</guid>
+      <guid>https://www.charliechang.tw/posts/2013-11-28-a-little-cheating-way-to-move-into-emberjs/</guid>
       <description>In the ember.js , the view system has lifecycle hooks. So, if you don&amp;rsquo;t want or you don&amp;rsquo;t know how to implement all actions directly, there is a hook you can use and you can still use all old functions you use to bind events to the elements, didInsertElemnet hook. As the ember.js guide mentions, this hook is called immediately after the view has been inserted into DOM. So, you can use jQuery selector to find the element then bind the event on it.</description>
     </item>
     
     <item>
       <title>Handle waiting multiple ajax requests</title>
-      <link>http://www.charliechang.tw/posts/2013-11-23-handle-wating-multiple-ajax-requests/</link>
+      <link>https://www.charliechang.tw/posts/2013-11-23-handle-wating-multiple-ajax-requests/</link>
       <pubDate>Sat, 23 Nov 2013 15:42:00 -0700</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2013-11-23-handle-wating-multiple-ajax-requests/</guid>
+      <guid>https://www.charliechang.tw/posts/2013-11-23-handle-wating-multiple-ajax-requests/</guid>
       <description>The general way to handle multiple ajax requests, you can use the following code.
 $.when(ajaxCall1, ajaxCall2, ...).done(function(result1, result2, ..) { // do something }  ps:result1, result2, &amp;hellip; are all array objects and the really data exists in the first element of each result array
 However, this way can work only when you already know how many ajax calls.
@@ -44,10 +44,10 @@ Here, we need to use apply to invoke jQuery&amp;rsquo;s when function and use ar
     
     <item>
       <title>ruby regular expression and rotate 2d array note</title>
-      <link>http://www.charliechang.tw/posts/2013-11-03-ruby-regular-expression-and-rotate-array-note/</link>
+      <link>https://www.charliechang.tw/posts/2013-11-03-ruby-regular-expression-and-rotate-array-note/</link>
       <pubDate>Sun, 03 Nov 2013 08:00:00 -0700</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2013-11-03-ruby-regular-expression-and-rotate-array-note/</guid>
+      <guid>https://www.charliechang.tw/posts/2013-11-03-ruby-regular-expression-and-rotate-array-note/</guid>
       <description>Regular Expression char =~ /[0-9]/ or char =~ /\d/ or char =~ /[[:digit]]/.
 These three expressions are the same to check the character is digit or not.
 You can find more information from Ruby regular expressions
@@ -57,10 +57,10 @@ So, we can use a loop to wrap this then to accomplish rotating a 2d array</descr
     
     <item>
       <title>Jinj2 with Handlebars</title>
-      <link>http://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</link>
+      <link>https://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</link>
       <pubDate>Wed, 09 Oct 2013 18:36:24 -0700</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</guid>
+      <guid>https://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</guid>
       <description>Jinja2 and Handlebar use the same delimiters for expressions. In order to avoid parsing errors, you have to do as follow.
 {% gist icharlie/360dacf4b6b6bcff7d9e %}
 ps: jekyll uses the same&amp;hellip;.
@@ -69,10 +69,10 @@ Update: 2013-11-11 You can put the code into {{ &amp;ldquo;{% raw &amp;rdquo; }}
     
     <item>
       <title>Create Arrow Without Image</title>
-      <link>http://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</link>
+      <link>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</guid>
+      <guid>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</guid>
       <description>We need to two div continers to accomplish this.
 One is outside div container, and the other is inside div container, which is the arrow.
 In the inside div, we need to use transform, rotate and scall, to make it look like arrow.
@@ -81,10 +81,10 @@ We also need to centralize the inside div. Because the posistion is absolute, we
     
     <item>
       <title>How to use r manipulate date string</title>
-      <link>http://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</link>
+      <link>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</guid>
+      <guid>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</guid>
       <description>Convert string to Date object To convert string to Date object, we can use as.Date function.
 The default format is 2015-01-01%Y-%m-%d or 2015/01/01%Y/%m/%d.
  as.Data(&amp;quot;dateString&amp;quot;)  filter data by year and moth subset(data, format.Date(dateColumn, &amp;quot;%m&amp;quot;) == &amp;quot;12&amp;quot; &amp;amp; format.Date(dateColumn, &amp;quot;%y&amp;quot;) == &amp;quot;13&amp;quot;)`  The data in the date column can be string or Date object. If using string, it should be %Y-%m-%d/%Y/%m/%d format.</description>
@@ -92,10 +92,10 @@ The default format is 2015-01-01%Y-%m-%d or 2015/01/01%Y/%m/%d.
     
     <item>
       <title>PHP interface</title>
-      <link>http://www.charliechang.tw/posts/2016-02-12-php-interface/</link>
+      <link>https://www.charliechang.tw/posts/2016-02-12-php-interface/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2016-02-12-php-interface/</guid>
+      <guid>https://www.charliechang.tw/posts/2016-02-12-php-interface/</guid>
       <description>In object-oriented programming, interface is a contract of a class. If a class wants to have this kind interface, it must implement the methods defined in the interface. In my opinion, the idea behind the interface is let users do less work when they need to switch different classes in many places. And interface helps(or forces?) you to think about abstraction layer of the classes.
 Here are examples.
 Before: without interface {% gist icharlie/2fe23260c3f7f2d623a8 %}</description>
@@ -103,10 +103,10 @@ Before: without interface {% gist icharlie/2fe23260c3f7f2d623a8 %}</description>
     
     <item>
       <title>Read sequence csv files into one data frame in R</title>
-      <link>http://www.charliechang.tw/posts/2015-01-17-read-sequence-csv-files-into-one-data-frame-in-r/</link>
+      <link>https://www.charliechang.tw/posts/2015-01-17-read-sequence-csv-files-into-one-data-frame-in-r/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2015-01-17-read-sequence-csv-files-into-one-data-frame-in-r/</guid>
+      <guid>https://www.charliechang.tw/posts/2015-01-17-read-sequence-csv-files-into-one-data-frame-in-r/</guid>
       <description>In the folder, there are 001, 002, &amp;hellip;., 999.csv files. How do we read all csv files and combine them to one data frame?
 I find two different ways to load all files. One is using list.files to store all file paths into one variable. The other one is using sprintf to build file path each time.
 Here are examples.
@@ -116,19 +116,19 @@ data &amp;lt;- data.frame() files &amp;lt;- list.files(directory, full.names = T
     
     <item>
       <title>The Importance of the Domain Konwledge</title>
-      <link>http://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</link>
+      <link>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</guid>
+      <guid>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</guid>
       <description>Last week, I got an emergency bug and our support team said the client is willing to pay extra money to fix it ASAP. So, after the regular stand meeting, I went to ask a senior about this issue. He told me he haven&amp;rsquo;t seen this bug before and he would help me. At the same time, I aslo kept digging into the same bug. About 10 mins later, we both found where causes the bug.</description>
     </item>
     
     <item>
       <title>Using Publish/Subscribe Pattern to manage related input fields</title>
-      <link>http://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</link>
+      <link>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</guid>
+      <guid>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</guid>
       <description>Recently, I need to implement a mortgage calculator. In the previous design, the calculator required a click event catch to update the result. But is it necessary?
 The clicking is an extra step and on mobile browsers, it results in unnecessary scrolling and clicking. So, the convenient way would be to update results when the value of each input field has been changed.
 Using jQuery, we can bind change event to each input field.</description>
@@ -136,20 +136,20 @@ Using jQuery, we can bind change event to each input field.</description>
     
     <item>
       <title>Using a local promise to update angular-datatables in angular way</title>
-      <link>http://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</link>
+      <link>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</guid>
+      <guid>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</guid>
       <description>The datatables is the one of most important jQuery libraries in our system. Recently, my colleagues are planing to start using angularjs. So, we need integrate both of them into our system. Lucky, there&amp;rsquo;s already one open source project angular-datatables doing a good job. Especially, we don&amp;rsquo;t have enough experience on angularjs.
 However, the way angular-datatables updates table is not &amp;ldquo;the angular way&amp;rdquo; according to what my co-workers say. They want to update front-end table and backend database separately, but angular-datatables is still going to update backend and then reload all on front-end table.</description>
     </item>
     
     <item>
       <title>angular datatables in angular way - an Add/Delete User example</title>
-      <link>http://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</link>
+      <link>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</guid>
+      <guid>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</guid>
       <description>In previous post, I designed a local promise function to make angular-datatables doesn&amp;rsquo;t need to reload entire page to get fresh data.
 Now, we start doing server side integration.
 First, we know every data should have an unique key to identify and id is the key in this example.
