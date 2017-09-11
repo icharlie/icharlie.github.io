@@ -1,0 +1,114 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>The Importance of the Domain Konwledge &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.charliechang.tw/post'>Archive</a>
+	<a href='https://www.charliechang.tw/tags'>Tags</a>
+	<a href='https://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        The Importance of the Domain Konwledge
+                    </h1>
+                    <h2 class="headline">
+                    Apr 6, 2014 16:58
+                    · 296 words
+                    · 2 minutes read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Last week, I got an emergency bug and our support team said the client is willing to pay extra money to fix it ASAP. So, after the regular stand meeting, I went to ask a senior about this issue. He told me he haven&rsquo;t seen this bug before and he would help me. At the same time, I aslo kept digging into the same bug. About 10 mins later, we both found where causes the bug. But we had different solutions.</p>
+
+<p>The bug was the data would be showed at a certain condition, and my solution was moving one line of code out of the if scope. But the senior&rsquo;s solution was keeping the code but changing the codition, and his solution is correct. The condition is gaven from the source and it should be followed, otherwise our company could get penalty.</p>
+
+<p>After the senior hept me solve this bug, we had a further discussion about the code. Because the previous code was getting data from a multidimensional array, about 3 dimensions. It looks like as the following.</p>
+
+<pre><code>if ($data['a']['b']['c] == 'y')
+{
+  // do something.
+}
+</code></pre>
+
+<p>At my first glance, I thought the code is just checking clients have customized labels, then we use them. But the condition is from other part of the knowledge. So, my idea was assigning a meaningful variable to this element, then the code becomes legible and easier to understand.</p>
+
+<pre><code>$isAllowedToDisplay = $data['a']['b']['c'];
+if ($isAllowedToDisplay == 'y' &amp;&amp; $isAllowedToDisplay == 'r')
+{
+  // do something.
+}
+</code></pre>
+
+<p>The lesson I learned is when trying to debug or change some code, I need to keep thinking of data. Otherwise, it will come out a &ldquo;wrong&rdquo; solution. To be a great developer/programmer, we should always be aware of the knowledge behind the data.</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.charliechang.tw/js/main.js"></script>
+<script src="https://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,161 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Create Arrow Without Image &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.charliechang.tw/post'>Archive</a>
+	<a href='https://www.charliechang.tw/tags'>Tags</a>
+	<a href='https://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Create Arrow Without Image
+                    </h1>
+                    <h2 class="headline">
+                    Jun 1, 2014 16:58
+                    · 209 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://www.charliechang.tw/tags/css3">css3</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>We need to two <code>div</code> continers to accomplish this.</p>
+
+<p>One is outside <code>div</code> container, and the other is inside <code>div</code> container, which is the arrow.</p>
+
+<p>In the inside <code>div</code>, we need to use <code>transform</code>, rotate and scall, to make it look like arrow.</p>
+
+<p>We also need to centralize the inside <code>div</code>. Because the posistion is <code>absolute</code>, we need to use <code>left:50%</code> and <code>margin-left:-12px</code>. The negative <em>12px</em> is the half of the inside <code>div</code>&rsquo;s width.</p>
+
+<p>If you want the border effect, you need to put an element,<code>span</code>, into the inside <code>div</code>. Move the <code>transform</code> into <code>span</code> and create border on <code>span</code> not inside <code>div</code>. In the inside <code>div</code>, we need to use <code>clip: rect(12px 24px 24px 0);</code> cut off the top border.</p>
+
+<p>Reference: <a href="http://medium.com">Medium</a></p>
+
+<p>HTML:</p>
+
+<pre><code>  &lt;div class=&quot;tool-tip-button&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Map&lt;/a&gt;
+    &lt;div class=&quot;clip&quot;&gt;&lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+
+<p>CSS:</p>
+
+<pre><code>  .tool-tip-button {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    top: 100px;
+    color: #fff;
+    font-size: 16pt;
+    background-color: #505050;
+    width: 60px;
+    margin-left: -30px;
+    border: 2px solid #CFCFCF;
+  }
+
+  .tool-tip-button a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .clip {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -12px;
+    left: 50%;
+    margin-left: -12px;
+    clip: rect(12px 24px 24px 0);
+  }
+
+  .arrow {
+    display: block;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(45deg) scale(.5);
+    border: 2px solid #CFCFCF;
+    background-color: #505050;
+  }
+</code></pre>
+
+<p><a href="http://codepen.io/icharlie/pen/FoIBj">Demo</a></p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.charliechang.tw/js/main.js"></script>
+<script src="https://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
