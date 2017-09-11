@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>PHP interface &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.charliechang.tw/post'>Archive</a>
+	<a href='https://www.charliechang.tw/tags'>Tags</a>
+	<a href='https://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        PHP interface
+                    </h1>
+                    <h2 class="headline">
+                    Feb 12, 2016 17:03
+                    · 113 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://www.charliechang.tw/tags/php">php</a>
+                          
+                              <a href="https://www.charliechang.tw/tags/thought">thought</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>In object-oriented programming, <a href="https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)">interface</a> is a contract of a class. If a class wants to have this kind interface, it must implement the methods defined in the interface. In my opinion, the idea behind the interface is let users do less work when they need to switch different classes in many places. And interface helps(or forces?) you to think about abstraction layer of the classes.</p>
+
+<p>Here are examples.</p>
+
+<h3 id="before-without-interface">Before: without interface</h3>
+
+<p>{% gist icharlie/2fe23260c3f7f2d623a8 %}</p>
+
+<h3 id="after-with-interface">After: with interface</h3>
+
+<p>{% gist icharlie/4338df7c09c813c562a0 %}</p>
+
+<p>In above two examples, if we introduce a C class in a new condition, without interface, we have to change file1, file2, …etc.</p>
+
+<p>With interface, we <strong>only</strong> need to change <code>Factory.php</code>.</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.charliechang.tw/js/main.js"></script>
+<script src="https://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

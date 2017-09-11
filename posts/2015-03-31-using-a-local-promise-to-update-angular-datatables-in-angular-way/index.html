@@ -1,0 +1,102 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Using a local promise to update angular-datatables in angular way &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.charliechang.tw/post'>Archive</a>
+	<a href='https://www.charliechang.tw/tags'>Tags</a>
+	<a href='https://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Using a local promise to update angular-datatables in angular way
+                    </h1>
+                    <h2 class="headline">
+                    Mar 31, 2015 17:01
+                    · 251 words
+                    · 2 minutes read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>The <a href="https://www.datatables.net/">datatables</a> is the one of most important jQuery libraries in our system. Recently, my colleagues are planing to start using <a href="https://angularjs.org/">angularjs</a>. So, we need integrate both of them into our system. Lucky, there&rsquo;s already one open source project <a href="http://l-lin.github.io/angular-datatables/">angular-datatables</a> doing a good job. Especially, we don&rsquo;t have enough experience on angularjs.</p>
+
+<p>However, the way angular-datatables updates table is not &ldquo;the angular way&rdquo; according to what my co-workers say. They want to update front-end table and backend database separately, but angular-datatables is still going to update backend and then reload all on front-end table. It is kind wasting resource.</p>
+
+<p>Fortunately, the angular-datatables provides a promise way to load data and we can take  anadvantage on it.  In order to make update the front-end datatables immediately, we need to create a function to return a promise. So, when we do <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> actions and call <code>reloadData</code>, it will just reload from the front-end data rather making another ajax call to get the all data from server. It looks like simple and elegant.</p>
+
+<p>Now, we need to think further. We update front-end without checking the CRUD actions are success or failed, so we might cause the disconnection between client and server. In this case, we need to write more custom code to solve issues introduced by not using the datatables&rsquo; mechanism to update front-end. I will talk about using <code>$http</code> to design a rollback to deal with failing issue.</p>
+
+<p>Here is an example adding a new user on the front-end.
+{% gist icharlie/8084838dace2d43a47fb %}</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.charliechang.tw/js/main.js"></script>
+<script src="https://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

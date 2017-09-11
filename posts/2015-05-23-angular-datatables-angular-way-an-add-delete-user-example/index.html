@@ -1,0 +1,138 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>angular datatables in angular way - an Add/Delete User example &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.charliechang.tw/post'>Archive</a>
+	<a href='https://www.charliechang.tw/tags'>Tags</a>
+	<a href='https://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        angular datatables in angular way - an Add/Delete User example
+                    </h1>
+                    <h2 class="headline">
+                    May 23, 2015 17:02
+                    · 288 words
+                    · 2 minutes read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://www.charliechang.tw/tags/angular">angular</a>
+                          
+                              <a href="https://www.charliechang.tw/tags/js">js</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>In previous <a href="/2015/03/31/using-a-local-promise-to-update-angular-datatables-in-angular-way.html">post</a>,
+I designed a local promise function to make angular-datatables doesn&rsquo;t need to reload entire page to get fresh data.</p>
+
+<p>Now, we start doing server side integration.</p>
+
+<p>First, we know every data should have an unique key to identify and <em>id</em> is the key in this example.</p>
+
+<p>So, <em>id</em> is the data we need to wait for server&rsquo;s response. In my opinion, we can deal with this situation in two different ways.</p>
+
+<ol>
+<li>Update front end table, send the request to server and use server&rsquo;s response to update the new user&rsquo;s id.</li>
+<li>Send the request to server, use server&rsquo;s response to update front end table.</li>
+</ol>
+
+<p>The first approach is we can view up-to-date data immediately. However, this could have following concerns.</p>
+
+<ul>
+<li>There is no unique key in the front-end data and we can&rsquo;t guarantee server&rsquo;s responses will follow the requests&rsquo; sequence.</li>
+<li>If failed on the server, front-end needs to rollback or keep sending the same request to server.</li>
+<li>Feedback for user. We can not show the data at beginning and remove it in the rollback without giving user any information.</li>
+</ul>
+
+<p>In this example, I take the simple approach - sending the request, waiting server&rsquo;s response and updating the front-end table.
+This will make life easier and still have the effect we want.</p>
+
+<p>The difference between this and <a href="/2015/03/31/using-a-local-promise-to-update-angular-datatables-in-angular-way.html">previous example</a>
+is not much.</p>
+
+<p>I inject the <code>$http</code> service into <code>DataReloadWithPromiseCtrl</code> controller and move the updating datatables code into the <code>success</code> method.</p>
+
+<p>{% gist icharlie/48a8c985eb57456db47d %}</p>
+
+<p>And we need to do similar thing to delete a user.
+The difference is I create a cache <code>_users</code> filters out the deleting user, wait to server&rsquo;s response, and update <code>vm.users</code> to the <code>_users</code>.</p>
+
+<p>{% gist icharlie/38a796fe54f404264ff4 %}</p>
+
+<p>The example code is <a href="https://github.com/icharlie/angular-datatables-completed">here</a></p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.charliechang.tw/js/main.js"></script>
+<script src="https://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

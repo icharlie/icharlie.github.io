@@ -1,0 +1,122 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Read sequence csv files into one data frame in R &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.charliechang.tw/post'>Archive</a>
+	<a href='https://www.charliechang.tw/tags'>Tags</a>
+	<a href='https://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Read sequence csv files into one data frame in R
+                    </h1>
+                    <h2 class="headline">
+                    Jan 1, 0001 00:00
+                    · 96 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://www.charliechang.tw/tags/r">R</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>In the folder, there are 001, 002, &hellip;., 999.csv files. How do we read all csv files and combine them to one data frame?</p>
+
+<p>I find two different ways to load all files. One is using <code>list.files</code> to store all file paths into one variable. The other one is using <code>sprintf</code> to build file path each time.</p>
+
+<p>Here are examples.</p>
+
+<ol>
+<li><p>Using <code>list.files</code></p>
+
+<pre><code class="language-R">    data &lt;- data.frame()
+    files &lt;- list.files(directory, full.names = TRUE)
+    for(i in 1:999) {
+        data &lt;- rbind(data, read.csv(files[i]))
+    }
+</code></pre></li>
+
+<li><p>Using <code>sprintf</code></p>
+
+<pre><code class="language-R">    data &lt;- data.frame()
+    for(i in 1:999) {
+        data &lt;- rbind(data, read.csv(sprintf(&quot;%s/%03.0f.csv&quot;, directory, i))
+    }
+</code></pre></li>
+</ol>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.charliechang.tw/js/main.js"></script>
+<script src="https://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

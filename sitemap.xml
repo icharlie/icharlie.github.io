@@ -8,6 +8,41 @@
   </url>
   
   <url>
+    <loc>https://www.charliechang.tw/posts/2016-02-12-php-interface/</loc>
+    <lastmod>2016-02-12T17:03:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</loc>
+    <lastmod>2015-05-23T17:02:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</loc>
+    <lastmod>2015-03-31T17:01:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</loc>
+    <lastmod>2015-02-05T17:01:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</loc>
+    <lastmod>2015-01-01T16:59:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</loc>
+    <lastmod>2014-06-01T16:58:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</loc>
+    <lastmod>2014-04-06T16:58:00-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.charliechang.tw/posts/2013-12-08-the-first-alias-for-php/</loc>
     <lastmod>2013-12-08T15:45:00-07:00</lastmod>
   </url>
@@ -46,6 +81,7 @@
   
   <url>
     <loc>https://www.charliechang.tw/tags/angular/</loc>
+    <lastmod>2015-05-23T17:02:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,16 +91,14 @@
   </url>
   
   <url>
-    <loc>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</loc>
-  </url>
-  
-  <url>
     <loc>https://www.charliechang.tw/tags/css3/</loc>
+    <lastmod>2014-06-01T16:58:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.charliechang.tw/tags/data/</loc>
+    <lastmod>2015-01-01T16:59:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,20 +110,19 @@
   
   <url>
     <loc>https://www.charliechang.tw/tags/design-pattern/</loc>
+    <lastmod>2015-02-05T17:01:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</loc>
-  </url>
-  
-  <url>
     <loc>https://www.charliechang.tw/tags/javascript/</loc>
+    <lastmod>2015-02-05T17:01:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.charliechang.tw/tags/js/</loc>
+    <lastmod>2015-05-23T17:02:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -101,33 +134,25 @@
   
   <url>
     <loc>https://www.charliechang.tw/</loc>
-    <lastmod>2013-12-08T15:45:00-07:00</lastmod>
+    <lastmod>2016-02-12T17:03:00-07:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.charliechang.tw/posts/2016-02-12-php-interface/</loc>
   </url>
   
   <url>
     <loc>https://www.charliechang.tw/tags/php/</loc>
-    <lastmod>2013-12-08T15:45:00-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.charliechang.tw/tags/php-thought/</loc>
+    <lastmod>2016-02-12T17:03:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.charliechang.tw/posts/</loc>
-    <lastmod>2013-12-08T15:45:00-07:00</lastmod>
+    <lastmod>2016-02-12T17:03:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.charliechang.tw/tags/r/</loc>
+    <lastmod>2015-01-01T16:59:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -160,25 +185,15 @@
   </url>
   
   <url>
-    <loc>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</loc>
+    <loc>https://www.charliechang.tw/tags/thought/</loc>
+    <lastmod>2016-02-12T17:03:00-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.charliechang.tw/tags/view/</loc>
     <lastmod>2013-11-28T15:44:00-07:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</loc>
   </url>
   
 </urlset>

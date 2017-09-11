@@ -1,0 +1,142 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Using Publish/Subscribe Pattern to manage related input fields &middot; My New Hugo Site</title>
+		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://www.charliechang.tw/css/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.charliechang.tw/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.charliechang.tw/post'>Archive</a>
+	<a href='https://www.charliechang.tw/tags'>Tags</a>
+	<a href='https://www.charliechang.tw/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Using Publish/Subscribe Pattern to manage related input fields
+                    </h1>
+                    <h2 class="headline">
+                    Feb 5, 2015 17:01
+                    · 410 words
+                    · 2 minutes read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://www.charliechang.tw/tags/javascript">Javascript</a>
+                          
+                              <a href="https://www.charliechang.tw/tags/design-pattern">Design Pattern</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Recently, I need to implement a mortgage calculator. In the previous design, the calculator required a click event catch to update the result. But is it necessary?</p>
+
+<p>The clicking is an extra step and on mobile browsers, it results in unnecessary scrolling and clicking. So, the convenient way would be to update results when the value of each input field has been changed.</p>
+
+<p>Using jQuery, we can bind <code>change</code> event to each input field.
+The original implementation triggered the related field&rsquo;s <code>change</code> event, when a field would update. In the <code>change</code> event handler, it would update it&rsquo;s value and call a re-calculate function.
+However, this introduced an infinite loop. Here is why.</p>
+
+<ul>
+<li>when the home value changed, it would do calculation, then trigger percentage change.</li>
+<li>when the down payment changed, it would do a calculation, then trigger the percentage change event.</li>
+<li>when the percentage changed, it would do a calculation, then trigger the down payment change event.</li>
+</ul>
+
+<p>Do you see that?</p>
+
+<p>The <strong>down payment</strong> change and <strong>percentage</strong> change triggered each other&rsquo;s <code>change</code> event. They are two fields representing the <strong>same data</strong> in different ways, so if the home value changed, one of them would keep the same value and just change the other one. In order to avoid the infinite loop, I removed triggering percentage change code from the down payment field, and the triggering down payment change field from percentage field. Both of them just update each other&rsquo;s value directly.</p>
+
+<p>At this point, I felt like it was time to find a way to make code clearer and simpler. Then, I found the <strong>Publish/Subscribe patterns</strong> from Addy Osmani&rsquo;s <a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/">Learning JavaScript Design Patterns</a>.</p>
+
+<blockquote style="font-size: 16pt; font-style: italic; line-height: 1.3em;">
+The Observer and Publish/Subscribe patterns encourage us to think hard about the relationships between different parts of our application.
+</blockquote>
+
+<p>After re-thinking about the relationships between all the input fields, I used a state object to keep track of the input fields&rsquo; changes and so when the state object changed, it would update the all input fields. Now, <strong>the input fields only care updating the state object</strong> instead of updating other input fields. The responsibility has been move to the subscriber of the state change.</p>
+
+<p>So, steps have been simplified as following.</p>
+
+<ul>
+<li>When input field changed, doing calculation and publishing state change topic.</li>
+<li>When the state changes, all fields subscribed to the state will update.</li>
+</ul>
+
+<p>Is this a simpler and clearer way to deal with related input fields?</p>
+
+<p>My answer is <strong>Yes!</strong>.</p>
+
+<p><a href="/examples/input-pub-sub/">Example code</a>.</p>
+
+<hr />
+
+<p>2015-02-19 edited by <a href="https://twitter.com/baudotkim">Bau</a></p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://www.charliechang.tw/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.charliechang.tw/js/main.js"></script>
+<script src="https://www.charliechang.tw/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

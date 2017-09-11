@@ -6,10 +6,86 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Dec 2013 15:45:00 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 12 Feb 2016 17:03:00 -0700</lastBuildDate>
     
 	<atom:link href="https://www.charliechang.tw/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHP interface</title>
+      <link>https://www.charliechang.tw/posts/2016-02-12-php-interface/</link>
+      <pubDate>Fri, 12 Feb 2016 17:03:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2016-02-12-php-interface/</guid>
+      <description>In object-oriented programming, interface is a contract of a class. If a class wants to have this kind interface, it must implement the methods defined in the interface. In my opinion, the idea behind the interface is let users do less work when they need to switch different classes in many places. And interface helps(or forces?) you to think about abstraction layer of the classes.
+Here are examples.
+Before: without interface {% gist icharlie/2fe23260c3f7f2d623a8 %}</description>
+    </item>
+    
+    <item>
+      <title>angular datatables in angular way - an Add/Delete User example</title>
+      <link>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</link>
+      <pubDate>Sat, 23 May 2015 17:02:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</guid>
+      <description>In previous post, I designed a local promise function to make angular-datatables doesn&amp;rsquo;t need to reload entire page to get fresh data.
+Now, we start doing server side integration.
+First, we know every data should have an unique key to identify and id is the key in this example.
+So, id is the data we need to wait for server&amp;rsquo;s response. In my opinion, we can deal with this situation in two different ways.</description>
+    </item>
+    
+    <item>
+      <title>Using a local promise to update angular-datatables in angular way</title>
+      <link>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</link>
+      <pubDate>Tue, 31 Mar 2015 17:01:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</guid>
+      <description>The datatables is the one of most important jQuery libraries in our system. Recently, my colleagues are planing to start using angularjs. So, we need integrate both of them into our system. Lucky, there&amp;rsquo;s already one open source project angular-datatables doing a good job. Especially, we don&amp;rsquo;t have enough experience on angularjs.
+However, the way angular-datatables updates table is not &amp;ldquo;the angular way&amp;rdquo; according to what my co-workers say. They want to update front-end table and backend database separately, but angular-datatables is still going to update backend and then reload all on front-end table.</description>
+    </item>
+    
+    <item>
+      <title>Using Publish/Subscribe Pattern to manage related input fields</title>
+      <link>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</link>
+      <pubDate>Thu, 05 Feb 2015 17:01:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</guid>
+      <description>Recently, I need to implement a mortgage calculator. In the previous design, the calculator required a click event catch to update the result. But is it necessary?
+The clicking is an extra step and on mobile browsers, it results in unnecessary scrolling and clicking. So, the convenient way would be to update results when the value of each input field has been changed.
+Using jQuery, we can bind change event to each input field.</description>
+    </item>
+    
+    <item>
+      <title>How to use r manipulate date string</title>
+      <link>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</link>
+      <pubDate>Thu, 01 Jan 2015 16:59:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</guid>
+      <description>Convert string to Date object To convert string to Date object, we can use as.Date function.
+The default format is 2015-01-01%Y-%m-%d or 2015/01/01%Y/%m/%d.
+ as.Data(&amp;quot;dateString&amp;quot;)  filter data by year and moth subset(data, format.Date(dateColumn, &amp;quot;%m&amp;quot;) == &amp;quot;12&amp;quot; &amp;amp; format.Date(dateColumn, &amp;quot;%y&amp;quot;) == &amp;quot;13&amp;quot;)`  The data in the date column can be string or Date object. If using string, it should be %Y-%m-%d/%Y/%m/%d format.</description>
+    </item>
+    
+    <item>
+      <title>Create Arrow Without Image</title>
+      <link>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</link>
+      <pubDate>Sun, 01 Jun 2014 16:58:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</guid>
+      <description>We need to two div continers to accomplish this.
+One is outside div container, and the other is inside div container, which is the arrow.
+In the inside div, we need to use transform, rotate and scall, to make it look like arrow.
+We also need to centralize the inside div. Because the posistion is absolute, we need to use left:50% and margin-left:-12px. The negative 12px is the half of the inside div&amp;rsquo;s width.</description>
+    </item>
+    
+    <item>
+      <title>The Importance of the Domain Konwledge</title>
+      <link>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</link>
+      <pubDate>Sun, 06 Apr 2014 16:58:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</guid>
+      <description>Last week, I got an emergency bug and our support team said the client is willing to pay extra money to fix it ASAP. So, after the regular stand meeting, I went to ask a senior about this issue. He told me he haven&amp;rsquo;t seen this bug before and he would help me. At the same time, I aslo kept digging into the same bug. About 10 mins later, we both found where causes the bug.</description>
+    </item>
     
     <item>
       <title>The first alias for PHP</title>
@@ -68,40 +144,6 @@ Update: 2013-11-11 You can put the code into {{ &amp;ldquo;{% raw &amp;rdquo; }}
     </item>
     
     <item>
-      <title>Create Arrow Without Image</title>
-      <link>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</guid>
-      <description>We need to two div continers to accomplish this.
-One is outside div container, and the other is inside div container, which is the arrow.
-In the inside div, we need to use transform, rotate and scall, to make it look like arrow.
-We also need to centralize the inside div. Because the posistion is absolute, we need to use left:50% and margin-left:-12px. The negative 12px is the half of the inside div&amp;rsquo;s width.</description>
-    </item>
-    
-    <item>
-      <title>How to use r manipulate date string</title>
-      <link>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</guid>
-      <description>Convert string to Date object To convert string to Date object, we can use as.Date function.
-The default format is 2015-01-01%Y-%m-%d or 2015/01/01%Y/%m/%d.
- as.Data(&amp;quot;dateString&amp;quot;)  filter data by year and moth subset(data, format.Date(dateColumn, &amp;quot;%m&amp;quot;) == &amp;quot;12&amp;quot; &amp;amp; format.Date(dateColumn, &amp;quot;%y&amp;quot;) == &amp;quot;13&amp;quot;)`  The data in the date column can be string or Date object. If using string, it should be %Y-%m-%d/%Y/%m/%d format.</description>
-    </item>
-    
-    <item>
-      <title>PHP interface</title>
-      <link>https://www.charliechang.tw/posts/2016-02-12-php-interface/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.charliechang.tw/posts/2016-02-12-php-interface/</guid>
-      <description>In object-oriented programming, interface is a contract of a class. If a class wants to have this kind interface, it must implement the methods defined in the interface. In my opinion, the idea behind the interface is let users do less work when they need to switch different classes in many places. And interface helps(or forces?) you to think about abstraction layer of the classes.
-Here are examples.
-Before: without interface {% gist icharlie/2fe23260c3f7f2d623a8 %}</description>
-    </item>
-    
-    <item>
       <title>Read sequence csv files into one data frame in R</title>
       <link>https://www.charliechang.tw/posts/2015-01-17-read-sequence-csv-files-into-one-data-frame-in-r/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -112,48 +154,6 @@ I find two different ways to load all files. One is using list.files to store al
 Here are examples.
  Using list.files
 data &amp;lt;- data.frame() files &amp;lt;- list.files(directory, full.names = TRUE) for(i in 1:999) { data &amp;lt;- rbind(data, read.</description>
-    </item>
-    
-    <item>
-      <title>The Importance of the Domain Konwledge</title>
-      <link>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.charliechang.tw/posts/2014-04-06-the-importance-of-the-domain-knowledge/</guid>
-      <description>Last week, I got an emergency bug and our support team said the client is willing to pay extra money to fix it ASAP. So, after the regular stand meeting, I went to ask a senior about this issue. He told me he haven&amp;rsquo;t seen this bug before and he would help me. At the same time, I aslo kept digging into the same bug. About 10 mins later, we both found where causes the bug.</description>
-    </item>
-    
-    <item>
-      <title>Using Publish/Subscribe Pattern to manage related input fields</title>
-      <link>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</guid>
-      <description>Recently, I need to implement a mortgage calculator. In the previous design, the calculator required a click event catch to update the result. But is it necessary?
-The clicking is an extra step and on mobile browsers, it results in unnecessary scrolling and clicking. So, the convenient way would be to update results when the value of each input field has been changed.
-Using jQuery, we can bind change event to each input field.</description>
-    </item>
-    
-    <item>
-      <title>Using a local promise to update angular-datatables in angular way</title>
-      <link>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.charliechang.tw/posts/2015-03-31-using-a-local-promise-to-update-angular-datatables-in-angular-way/</guid>
-      <description>The datatables is the one of most important jQuery libraries in our system. Recently, my colleagues are planing to start using angularjs. So, we need integrate both of them into our system. Lucky, there&amp;rsquo;s already one open source project angular-datatables doing a good job. Especially, we don&amp;rsquo;t have enough experience on angularjs.
-However, the way angular-datatables updates table is not &amp;ldquo;the angular way&amp;rdquo; according to what my co-workers say. They want to update front-end table and backend database separately, but angular-datatables is still going to update backend and then reload all on front-end table.</description>
-    </item>
-    
-    <item>
-      <title>angular datatables in angular way - an Add/Delete User example</title>
-      <link>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</guid>
-      <description>In previous post, I designed a local promise function to make angular-datatables doesn&amp;rsquo;t need to reload entire page to get fresh data.
-Now, we start doing server side integration.
-First, we know every data should have an unique key to identify and id is the key in this example.
-So, id is the data we need to wait for server&amp;rsquo;s response. In my opinion, we can deal with this situation in two different ways.</description>
     </item>
     
   </channel>
