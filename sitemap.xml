@@ -96,6 +96,12 @@
   </url>
   
   <url>
+    <loc>https://www.charliechang.tw/</loc>
+    <lastmod>2016-02-12T17:03:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.charliechang.tw/tags/css3/</loc>
     <lastmod>2014-06-01T16:58:00-07:00</lastmod>
     <priority>0</priority>
@@ -134,12 +140,6 @@
   <url>
     <loc>https://www.charliechang.tw/tags/mber.js/</loc>
     <lastmod>2013-11-28T15:44:00-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.charliechang.tw/</loc>
-    <lastmod>2016-02-12T17:03:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
