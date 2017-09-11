@@ -73,12 +73,6 @@
   </url>
   
   <url>
-    <loc>https://www.charliechang.tw/tags/.when/</loc>
-    <lastmod>2013-11-23T15:42:00-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.charliechang.tw/tags/ajax/</loc>
     <lastmod>2013-11-23T15:42:00-07:00</lastmod>
     <priority>0</priority>
@@ -128,6 +122,12 @@
   <url>
     <loc>https://www.charliechang.tw/tags/javascript/</loc>
     <lastmod>2015-02-05T17:01:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/tags/jquery/</loc>
+    <lastmod>2013-11-23T15:42:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -194,6 +194,12 @@
   <url>
     <loc>https://www.charliechang.tw/tags/view/</loc>
     <lastmod>2013-11-28T15:44:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charliechang.tw/tags/when/</loc>
+    <lastmod>2013-11-23T15:42:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>When on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/when/</link>
+    <description>Recent content in When on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Nov 2013 15:42:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/when/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Handle waiting multiple ajax requests</title>
+      <link>https://www.charliechang.tw/posts/2013-11-23-handle-wating-multiple-ajax-requests/</link>
+      <pubDate>Sat, 23 Nov 2013 15:42:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2013-11-23-handle-wating-multiple-ajax-requests/</guid>
+      <description>The general way to handle multiple ajax requests, you can use the following code.
+$.when(ajaxCall1, ajaxCall2, ...).done(function(result1, result2, ..) { // do something }  ps:result1, result2, &amp;hellip; are all array objects and the really data exists in the first element of each result array
+However, this way can work only when you already know how many ajax calls.
+How do you handle multiple unknown ajax calls?
+Here, we need to use apply to invoke jQuery&amp;rsquo;s when function and use arguments to get the all results</description>
+    </item>
+    
+  </channel>
+</rss>
