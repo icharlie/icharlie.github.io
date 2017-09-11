@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/r/</link>
+    <description>Recent content in R on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Jan 2015 17:10:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Read sequence csv files into one data frame in R</title>
+      <link>https://www.charliechang.tw/posts/2015-01-17-read-sequence-csv-files-into-one-data-frame-in-r/</link>
+      <pubDate>Wed, 07 Jan 2015 17:10:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-01-17-read-sequence-csv-files-into-one-data-frame-in-r/</guid>
+      <description>In the folder, there are 001, 002, &amp;hellip;., 999.csv files. How do we read all csv files and combine them to one data frame?
+I find two different ways to load all files. One is using list.files to store all file paths into one variable. The other one is using sprintf to build file path each time.
+Here are examples.
+ Using list.files
+data &amp;lt;- data.frame() files &amp;lt;- list.files(directory, full.names = TRUE) for(i in 1:999) { data &amp;lt;- rbind(data, read.</description>
+    </item>
+    
+    <item>
+      <title>How to use r manipulate date string</title>
+      <link>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</link>
+      <pubDate>Thu, 01 Jan 2015 16:59:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-01-01-how-to-use-r-manipulate-date-string/</guid>
+      <description>Convert string to Date object To convert string to Date object, we can use as.Date function.
+The default format is 2015-01-01%Y-%m-%d or 2015/01/01%Y/%m/%d.
+ as.Data(&amp;quot;dateString&amp;quot;)  filter data by year and moth subset(data, format.Date(dateColumn, &amp;quot;%m&amp;quot;) == &amp;quot;12&amp;quot; &amp;amp; format.Date(dateColumn, &amp;quot;%y&amp;quot;) == &amp;quot;13&amp;quot;)`  The data in the date column can be string or Date object. If using string, it should be %Y-%m-%d/%Y/%m/%d format.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css3 on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/css3/</link>
+    <description>Recent content in Css3 on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jun 2014 16:58:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/css3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Arrow Without Image</title>
+      <link>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</link>
+      <pubDate>Sun, 01 Jun 2014 16:58:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2014-06-01-create-arrow-without-image/</guid>
+      <description>We need to two div continers to accomplish this.
+One is outside div container, and the other is inside div container, which is the arrow.
+In the inside div, we need to use transform, rotate and scall, to make it look like arrow.
+We also need to centralize the inside div. Because the posistion is absolute, we need to use left:50% and margin-left:-12px. The negative 12px is the half of the inside div&amp;rsquo;s width.</description>
+    </item>
+    
+  </channel>
+</rss>

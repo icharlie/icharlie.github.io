@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/ruby/</link>
+    <description>Recent content in Ruby on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Nov 2013 08:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ruby regular expression and rotate 2d array note</title>
+      <link>https://www.charliechang.tw/posts/2013-11-03-ruby-regular-expression-and-rotate-array-note/</link>
+      <pubDate>Sun, 03 Nov 2013 08:00:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2013-11-03-ruby-regular-expression-and-rotate-array-note/</guid>
+      <description>Regular Expression char =~ /[0-9]/ or char =~ /\d/ or char =~ /[[:digit]]/.
+These three expressions are the same to check the character is digit or not.
+You can find more information from Ruby regular expressions
+Rotate 2d Array array.map { |row| row[0]} will return an array includes all first elements of each row.
+So, we can use a loop to wrap this then to accomplish rotating a 2d array</description>
+    </item>
+    
+  </channel>
+</rss>

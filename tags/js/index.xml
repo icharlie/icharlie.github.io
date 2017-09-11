@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Js on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/js/</link>
+    <description>Recent content in Js on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 May 2015 17:02:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>angular datatables in angular way - an Add/Delete User example</title>
+      <link>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</link>
+      <pubDate>Sat, 23 May 2015 17:02:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-05-23-angular-datatables-angular-way-an-add-delete-user-example/</guid>
+      <description>In previous post, I designed a local promise function to make angular-datatables doesn&amp;rsquo;t need to reload entire page to get fresh data.
+Now, we start doing server side integration.
+First, we know every data should have an unique key to identify and id is the key in this example.
+So, id is the data we need to wait for server&amp;rsquo;s response. In my opinion, we can deal with this situation in two different ways.</description>
+    </item>
+    
+  </channel>
+</rss>

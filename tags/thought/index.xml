@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thought on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/thought/</link>
+    <description>Recent content in Thought on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Feb 2016 17:03:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/thought/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP interface</title>
+      <link>https://www.charliechang.tw/posts/2016-02-12-php-interface/</link>
+      <pubDate>Fri, 12 Feb 2016 17:03:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2016-02-12-php-interface/</guid>
+      <description>In object-oriented programming, interface is a contract of a class. If a class wants to have this kind interface, it must implement the methods defined in the interface. In my opinion, the idea behind the interface is let users do less work when they need to switch different classes in many places. And interface helps(or forces?) you to think about abstraction layer of the classes.
+Here are examples.
+Before: without interface {% gist icharlie/2fe23260c3f7f2d623a8 %}</description>
+    </item>
+    
+  </channel>
+</rss>

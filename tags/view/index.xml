@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>View on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/view/</link>
+    <description>Recent content in View on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Nov 2013 15:44:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/view/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A little cheating way to move your site into ember.js</title>
+      <link>https://www.charliechang.tw/posts/2013-11-28-a-little-cheating-way-to-move-into-emberjs/</link>
+      <pubDate>Thu, 28 Nov 2013 15:44:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2013-11-28-a-little-cheating-way-to-move-into-emberjs/</guid>
+      <description>In the ember.js , the view system has lifecycle hooks. So, if you don&amp;rsquo;t want or you don&amp;rsquo;t know how to implement all actions directly, there is a hook you can use and you can still use all old functions you use to bind events to the elements, didInsertElemnet hook. As the ember.js guide mentions, this hook is called immediately after the view has been inserted into DOM. So, you can use jQuery selector to find the element then bind the event on it.</description>
+    </item>
+    
+  </channel>
+</rss>

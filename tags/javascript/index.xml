@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Charlie Chang</title>
+    <link>https://www.charliechang.tw/tags/javascript/</link>
+    <description>Recent content in Javascript on Charlie Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2015 17:01:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.charliechang.tw/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Publish/Subscribe Pattern to manage related input fields</title>
+      <link>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</link>
+      <pubDate>Thu, 05 Feb 2015 17:01:00 -0700</pubDate>
+      
+      <guid>https://www.charliechang.tw/posts/2015-02-05-using-publish-subscribe-pattern-to-manage-input-fields/</guid>
+      <description>Recently, I need to implement a mortgage calculator. In the previous design, the calculator required a click event catch to update the result. But is it necessary?
+The clicking is an extra step and on mobile browsers, it results in unnecessary scrolling and clicking. So, the convenient way would be to update results when the value of each input field has been changed.
+Using jQuery, we can bind change event to each input field.</description>
+    </item>
+    
+  </channel>
+</rss>
