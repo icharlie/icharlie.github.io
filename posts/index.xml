@@ -19,7 +19,7 @@
       <guid>https://www.charliechang.tw/posts/2016-02-12-php-interface/</guid>
       <description>In object-oriented programming, interface is a contract of a class. If a class wants to have this kind interface, it must implement the methods defined in the interface. In my opinion, the idea behind the interface is let users do less work when they need to switch different classes in many places. And interface helps(or forces?) you to think about abstraction layer of the classes.
 Here are examples.
-Before: without interface {% gist icharlie/2fe23260c3f7f2d623a8 %}</description>
+Before: without interface  After: with interface  In above two examples, if we introduce a C class in a new condition, without interface, we have to change file1, file2, …etc.</description>
     </item>
     
     <item>
@@ -151,8 +151,7 @@ So, we can use a loop to wrap this then to accomplish rotating a 2d array</descr
       
       <guid>https://www.charliechang.tw/posts/2013-10-09-jinja2-with-handlebars/</guid>
       <description>Jinja2 and Handlebar use the same delimiters for expressions. In order to avoid parsing errors, you have to do as follow.
-{% gist icharlie/360dacf4b6b6bcff7d9e %}
-ps: jekyll uses the same&amp;hellip;.
+ ps: jekyll uses the same&amp;hellip;.
 Update: 2013-11-11 You can put the code into {{ &amp;ldquo;{% raw &amp;rdquo; }}%} and {{ &amp;ldquo;{% endraw &amp;rdquo; }}%} block; then jinja2 will escape this block.</description>
     </item>
     

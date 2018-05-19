@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Charlie Chang">
 		<meta name="description" content="My personal opinion and thought on software.">
-		<meta name="generator" content="Hugo 0.30.2" />
+		<meta name="generator" content="Hugo 0.41-DEV" />
 		<title>angular datatables in angular way - an Add/Delete User example &middot; Charlie Chang</title>
 		<link rel="shortcut icon" href="https://www.charliechang.tw/images/favicon.ico">
 		<link rel="stylesheet" href="https://www.charliechang.tw/css/style.css">
@@ -48,7 +48,7 @@
                     </h1>
                     <h2 class="headline">
                     May 23, 2015 17:02
-                    · 288 words
+                    · 280 words
                     · 2 minutes read
                       <span class="tags">
                       
@@ -95,12 +95,12 @@ is not much.</p>
 
 <p>I inject the <code>$http</code> service into <code>DataReloadWithPromiseCtrl</code> controller and move the updating datatables code into the <code>success</code> method.</p>
 
-<p>{% gist icharlie/48a8c985eb57456db47d %}</p>
+<script src="//gist.github.com/icharlie/48a8c985eb57456db47d.js"></script>
 
 <p>And we need to do similar thing to delete a user.
 The difference is I create a cache <code>_users</code> filters out the deleting user, wait to server&rsquo;s response, and update <code>vm.users</code> to the <code>_users</code>.</p>
 
-<p>{% gist icharlie/38a796fe54f404264ff4 %}</p>
+<script src="//gist.github.com/icharlie/38a796fe54f404264ff4.js"></script>
 
 <p>The example code is <a href="https://github.com/icharlie/angular-datatables-completed">here</a></p>
 
@@ -130,7 +130,7 @@ The difference is I create a cache <code>_users</code> filters out the deleting 
     
     <p class="small">
     
-       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> Charlie Chang
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> Charlie Chang
     
     </p>
     <p class="small">
